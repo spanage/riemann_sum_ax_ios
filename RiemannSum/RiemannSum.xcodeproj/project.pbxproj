@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87C5BDA017D2F448008E9B9F /* UIView+RSHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C5BD9F17D2F448008E9B9F /* UIView+RSHelpers.m */; };
+		87E19ADD17AF474500F459FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19ADC17AF474500F459FC /* UIKit.framework */; };
+		87E19ADF17AF474500F459FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19ADE17AF474500F459FC /* Foundation.framework */; };
+		87E19AE117AF474500F459FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19AE017AF474500F459FC /* CoreGraphics.framework */; };
+		87E19AE717AF474500F459FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87E19AE517AF474500F459FC /* InfoPlist.strings */; };
+		87E19AE917AF474500F459FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19AE817AF474500F459FC /* main.m */; };
+		87E19AED17AF474500F459FC /* RSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19AEC17AF474500F459FC /* RSAppDelegate.m */; };
+		87E19AEF17AF474500F459FC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E19AEE17AF474500F459FC /* Default.png */; };
+		87E19AF117AF474500F459FC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E19AF017AF474500F459FC /* Default@2x.png */; };
+		87E19AF317AF474500F459FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87E19AF217AF474500F459FC /* Default-568h@2x.png */; };
+		87E19AFB17AF474600F459FC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19AFA17AF474600F459FC /* SenTestingKit.framework */; };
+		87E19AFC17AF474600F459FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19ADC17AF474500F459FC /* UIKit.framework */; };
+		87E19AFD17AF474600F459FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19ADE17AF474500F459FC /* Foundation.framework */; };
+		87E19B0517AF474600F459FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87E19B0317AF474600F459FC /* InfoPlist.strings */; };
+		87E19B0817AF474600F459FC /* RiemannSumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19B0717AF474600F459FC /* RiemannSumTests.m */; };
+		87E19B1317AF4AD000F459FC /* RSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19B1217AF4AD000F459FC /* RSMainViewController.m */; };
+		87E19B1617AF4D7300F459FC /* RSRiemannModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19B1517AF4D7300F459FC /* RSRiemannModel.m */; };
+		87E19B1717AF4D7300F459FC /* RSRiemannModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19B1517AF4D7300F459FC /* RSRiemannModel.m */; };
+		87E19B1E17B35DC100F459FC /* RSControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19B1D17B35DC100F459FC /* RSControlsView.m */; };
+		87E19B2217B8730700F459FC /* RSGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E19B2117B8730700F459FC /* RSGraphView.m */; };
+		87E19B2517B88F3100F459FC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E19B2317B88F1B00F459FC /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87E19AFE17AF474600F459FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E19AD117AF474500F459FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E19AD817AF474500F459FC;
+			remoteInfo = RiemannSum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87C5BD9E17D2F448008E9B9F /* UIView+RSHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RSHelpers.h"; sourceTree = "<group>"; };
+		87C5BD9F17D2F448008E9B9F /* UIView+RSHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RSHelpers.m"; sourceTree = "<group>"; };
+		87E19AD917AF474500F459FC /* RiemannSum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiemannSum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E19ADC17AF474500F459FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		87E19ADE17AF474500F459FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		87E19AE017AF474500F459FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		87E19AE417AF474500F459FC /* RiemannSum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RiemannSum-Info.plist"; sourceTree = "<group>"; };
+		87E19AE617AF474500F459FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87E19AE817AF474500F459FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87E19AEA17AF474500F459FC /* RiemannSum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RiemannSum-Prefix.pch"; sourceTree = "<group>"; };
+		87E19AEB17AF474500F459FC /* RSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAppDelegate.h; sourceTree = "<group>"; };
+		87E19AEC17AF474500F459FC /* RSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAppDelegate.m; sourceTree = "<group>"; };
+		87E19AEE17AF474500F459FC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		87E19AF017AF474500F459FC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		87E19AF217AF474500F459FC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		87E19AF917AF474600F459FC /* RiemannSumTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiemannSumTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E19AFA17AF474600F459FC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		87E19B0217AF474600F459FC /* RiemannSumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RiemannSumTests-Info.plist"; sourceTree = "<group>"; };
+		87E19B0417AF474600F459FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87E19B0617AF474600F459FC /* RiemannSumTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RiemannSumTests.h; sourceTree = "<group>"; };
+		87E19B0717AF474600F459FC /* RiemannSumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RiemannSumTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		87E19B1117AF4AD000F459FC /* RSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMainViewController.h; sourceTree = "<group>"; };
+		87E19B1217AF4AD000F459FC /* RSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RSMainViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		87E19B1417AF4D7300F459FC /* RSRiemannModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSRiemannModel.h; sourceTree = "<group>"; };
+		87E19B1517AF4D7300F459FC /* RSRiemannModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSRiemannModel.m; sourceTree = "<group>"; };
+		87E19B1C17B35DC100F459FC /* RSControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSControlsView.h; sourceTree = "<group>"; };
+		87E19B1D17B35DC100F459FC /* RSControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RSControlsView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		87E19B2017B8730600F459FC /* RSGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphView.h; sourceTree = "<group>"; };
+		87E19B2117B8730700F459FC /* RSGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RSGraphView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		87E19B2317B88F1B00F459FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87E19AD617AF474500F459FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E19AE117AF474500F459FC /* CoreGraphics.framework in Frameworks */,
+				87E19ADD17AF474500F459FC /* UIKit.framework in Frameworks */,
+				87E19B2517B88F3100F459FC /* QuartzCore.framework in Frameworks */,
+				87E19ADF17AF474500F459FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E19AF517AF474600F459FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E19AFB17AF474600F459FC /* SenTestingKit.framework in Frameworks */,
+				87E19AFC17AF474600F459FC /* UIKit.framework in Frameworks */,
+				87E19AFD17AF474600F459FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87E19AD017AF474500F459FC = {
+			isa = PBXGroup;
+			children = (
+				87E19AE217AF474500F459FC /* RiemannSum */,
+				87E19B0017AF474600F459FC /* RiemannSumTests */,
+				87E19ADB17AF474500F459FC /* Frameworks */,
+				87E19ADA17AF474500F459FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87E19ADA17AF474500F459FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87E19AD917AF474500F459FC /* RiemannSum.app */,
+				87E19AF917AF474600F459FC /* RiemannSumTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87E19ADB17AF474500F459FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87E19ADC17AF474500F459FC /* UIKit.framework */,
+				87E19ADE17AF474500F459FC /* Foundation.framework */,
+				87E19AE017AF474500F459FC /* CoreGraphics.framework */,
+				87E19B2317B88F1B00F459FC /* QuartzCore.framework */,
+				87E19AFA17AF474600F459FC /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87E19AE217AF474500F459FC /* RiemannSum */ = {
+			isa = PBXGroup;
+			children = (
+				87E19AE317AF474500F459FC /* Supporting Files */,
+				87E19AEB17AF474500F459FC /* RSAppDelegate.h */,
+				87E19AEC17AF474500F459FC /* RSAppDelegate.m */,
+				87E19B1117AF4AD000F459FC /* RSMainViewController.h */,
+				87E19B1217AF4AD000F459FC /* RSMainViewController.m */,
+				87E19B1417AF4D7300F459FC /* RSRiemannModel.h */,
+				87E19B1517AF4D7300F459FC /* RSRiemannModel.m */,
+				87E19B1C17B35DC100F459FC /* RSControlsView.h */,
+				87E19B1D17B35DC100F459FC /* RSControlsView.m */,
+				87E19B2017B8730600F459FC /* RSGraphView.h */,
+				87E19B2117B8730700F459FC /* RSGraphView.m */,
+				87C5BD9E17D2F448008E9B9F /* UIView+RSHelpers.h */,
+				87C5BD9F17D2F448008E9B9F /* UIView+RSHelpers.m */,
+			);
+			path = RiemannSum;
+			sourceTree = "<group>";
+		};
+		87E19AE317AF474500F459FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87E19AE417AF474500F459FC /* RiemannSum-Info.plist */,
+				87E19AE517AF474500F459FC /* InfoPlist.strings */,
+				87E19AE817AF474500F459FC /* main.m */,
+				87E19AEA17AF474500F459FC /* RiemannSum-Prefix.pch */,
+				87E19AEE17AF474500F459FC /* Default.png */,
+				87E19AF017AF474500F459FC /* Default@2x.png */,
+				87E19AF217AF474500F459FC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87E19B0017AF474600F459FC /* RiemannSumTests */ = {
+			isa = PBXGroup;
+			children = (
+				87E19B0617AF474600F459FC /* RiemannSumTests.h */,
+				87E19B0717AF474600F459FC /* RiemannSumTests.m */,
+				87E19B0117AF474600F459FC /* Supporting Files */,
+			);
+			path = RiemannSumTests;
+			sourceTree = "<group>";
+		};
+		87E19B0117AF474600F459FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87E19B0217AF474600F459FC /* RiemannSumTests-Info.plist */,
+				87E19B0317AF474600F459FC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87E19AD817AF474500F459FC /* RiemannSum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E19B0B17AF474600F459FC /* Build configuration list for PBXNativeTarget "RiemannSum" */;
+			buildPhases = (
+				87E19AD517AF474500F459FC /* Sources */,
+				87E19AD617AF474500F459FC /* Frameworks */,
+				87E19AD717AF474500F459FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RiemannSum;
+			productName = RiemannSum;
+			productReference = 87E19AD917AF474500F459FC /* RiemannSum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87E19AF817AF474600F459FC /* RiemannSumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E19B0E17AF474600F459FC /* Build configuration list for PBXNativeTarget "RiemannSumTests" */;
+			buildPhases = (
+				87E19AF417AF474600F459FC /* Sources */,
+				87E19AF517AF474600F459FC /* Frameworks */,
+				87E19AF617AF474600F459FC /* Resources */,
+				87E19AF717AF474600F459FC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87E19AFF17AF474600F459FC /* PBXTargetDependency */,
+			);
+			name = RiemannSumTests;
+			productName = RiemannSumTests;
+			productReference = 87E19AF917AF474600F459FC /* RiemannSumTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87E19AD117AF474500F459FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Sommer Panage";
+			};
+			buildConfigurationList = 87E19AD417AF474500F459FC /* Build configuration list for PBXProject "RiemannSum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 87E19AD017AF474500F459FC;
+			productRefGroup = 87E19ADA17AF474500F459FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87E19AD817AF474500F459FC /* RiemannSum */,
+				87E19AF817AF474600F459FC /* RiemannSumTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87E19AD717AF474500F459FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E19AE717AF474500F459FC /* InfoPlist.strings in Resources */,
+				87E19AEF17AF474500F459FC /* Default.png in Resources */,
+				87E19AF117AF474500F459FC /* Default@2x.png in Resources */,
+				87E19AF317AF474500F459FC /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E19AF617AF474600F459FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E19B0517AF474600F459FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		87E19AF717AF474600F459FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87E19AD517AF474500F459FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E19AE917AF474500F459FC /* main.m in Sources */,
+				87E19AED17AF474500F459FC /* RSAppDelegate.m in Sources */,
+				87E19B1317AF4AD000F459FC /* RSMainViewController.m in Sources */,
+				87E19B1617AF4D7300F459FC /* RSRiemannModel.m in Sources */,
+				87E19B1E17B35DC100F459FC /* RSControlsView.m in Sources */,
+				87E19B2217B8730700F459FC /* RSGraphView.m in Sources */,
+				87C5BDA017D2F448008E9B9F /* UIView+RSHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E19AF417AF474600F459FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E19B0817AF474600F459FC /* RiemannSumTests.m in Sources */,
+				87E19B1717AF4D7300F459FC /* RSRiemannModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87E19AFF17AF474600F459FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E19AD817AF474500F459FC /* RiemannSum */;
+			targetProxy = 87E19AFE17AF474600F459FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87E19AE517AF474500F459FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87E19AE617AF474500F459FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		87E19B0317AF474600F459FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87E19B0417AF474600F459FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87E19B0917AF474600F459FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87E19B0A17AF474600F459FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87E19B0C17AF474600F459FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
+				INFOPLIST_FILE = "RiemannSum/RiemannSum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		87E19B0D17AF474600F459FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
+				INFOPLIST_FILE = "RiemannSum/RiemannSum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		87E19B0F17AF474600F459FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RiemannSum.app/RiemannSum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
+				INFOPLIST_FILE = "RiemannSumTests/RiemannSumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		87E19B1017AF474600F459FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RiemannSum.app/RiemannSum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
+				INFOPLIST_FILE = "RiemannSumTests/RiemannSumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87E19AD417AF474500F459FC /* Build configuration list for PBXProject "RiemannSum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E19B0917AF474600F459FC /* Debug */,
+				87E19B0A17AF474600F459FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E19B0B17AF474600F459FC /* Build configuration list for PBXNativeTarget "RiemannSum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E19B0C17AF474600F459FC /* Debug */,
+				87E19B0D17AF474600F459FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E19B0E17AF474600F459FC /* Build configuration list for PBXNativeTarget "RiemannSumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E19B0F17AF474600F459FC /* Debug */,
+				87E19B1017AF474600F459FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87E19AD117AF474500F459FC /* Project object */;
+}
