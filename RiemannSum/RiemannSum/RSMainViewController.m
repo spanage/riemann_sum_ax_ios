@@ -67,10 +67,12 @@
         NSString *sineString = @"sin(x)";
         NSString *xSquaredString = @"x^2";
         NSString *xCubedString = @"x^3";
-        
+
+#if ACCESSIBLE
         sineString.accessibilityLabel = @"sine x";
         xSquaredString.accessibilityLabel = @"x squared";
         xCubedString.accessibilityLabel = @"x cubed";
+#endif
         
         _functionStrings = @[sineString, xSquaredString, xCubedString];
         
@@ -124,7 +126,9 @@
     _titleView.font = TITLE_FONT;
     _titleView.backgroundColor = [UIColor clearColor];
     _titleView.textColor = [UIColor darkTextColor];
+#if ACCESSIBLE
     _titleView.accessibilityTraits = UIAccessibilityTraitHeader;
+#endif
     
     _controlsView = [[RSControlsView alloc] init];
     _controlsView.delegate = self;

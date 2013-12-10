@@ -68,7 +68,6 @@
 
 @implementation RSControlsView
 {
-    NSMutableArray *_functionStrings;
     NSMutableArray *_axFunctionStrings;
     UISegmentedControl *_functionSegmentedControl;
     UITextField *_xMinTextField;
@@ -124,8 +123,7 @@
 - (BOOL)addFunctionString:(NSString *)functionString
 {
     BOOL added = NO;
-    if ([_functionStrings count] < MAX_FUNCTIONS) {
-        [_functionStrings addObject:functionString];
+    if ([_functionSegmentedControl numberOfSegments] < MAX_FUNCTIONS) {
         [_functionSegmentedControl insertSegmentWithTitle:functionString atIndex:_functionSegmentedControl.numberOfSegments animated:NO];
         added = YES;
     }
@@ -155,7 +153,6 @@
 
 - (void)setup
 {
-    _functionStrings = [[NSMutableArray alloc] initWithCapacity:MAX_FUNCTIONS];
     _axFunctionStrings = [[NSMutableArray alloc] initWithCapacity:MAX_FUNCTIONS];
 
     _functionSegmentedControl = [[UISegmentedControl alloc] init];
@@ -173,8 +170,7 @@
     _xMinTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     _xMinTextField.clearsOnBeginEditing = YES;
     _xMinTextField.returnKeyType = UIReturnKeyDone;
-    _xMinTextField.accessibilityLabel = X_MIN_AX_LABEL;
-    
+
     _xMaxTextField = [[UITextField alloc] init];
     _xMaxTextField.placeholder = X_MAX_PLACEHOLDER;
     _xMaxTextField.backgroundColor = [UIColor whiteColor];
@@ -183,9 +179,12 @@
     _xMaxTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     _xMaxTextField.clearsOnBeginEditing = YES;
     _xMaxTextField.returnKeyType = UIReturnKeyDone;
-    _xMaxTextField.accessibilityLabel = X_MAX_AX_LABEL;
 
+#if ACCESSIBLE
     _rectangleCountStepper = [[RectangleStepper alloc] init];
+#else
+    _rectangleCountStepper = [[UIStepper alloc] init];
+#endif
     _rectangleCountStepper.tintColor = [UIColor blackColor];
     _rectangleCountStepper.minimumValue = RECTANGLE_COUNT_MIN;
     _rectangleCountStepper.maximumValue = RECTANGLE_COUNT_MAX;
@@ -197,14 +196,12 @@
     _rectangleCountLabel.text = RECTANGLE_COUNT_LABEL;
     _rectangleCountLabel.font = LABEL_FONT;
     _rectangleCountLabel.textColor = [UIColor darkTextColor];
-    _rectangleCountLabel.isAccessibilityElement = NO;
-    
+
     _rectangleCountValueLabel = [[UILabel alloc] init];
     _rectangleCountValueLabel.backgroundColor = [UIColor clearColor];
     _rectangleCountValueLabel.text = [NSString stringWithFormat:@"%d", (int)_rectangleCountStepper.value];
     _rectangleCountValueLabel.font = VALUE_FONT;
-    _rectangleCountValueLabel.isAccessibilityElement = NO;
-    
+
     _secondRowContainerView = [[UIView alloc] init];
     _secondRowContainerView.backgroundColor = [UIColor clearColor];
     
@@ -216,7 +213,13 @@
     [_secondRowContainerView addSubview:_rectangleCountValueLabel];
     [self addSubview:_secondRowContainerView];
 
-    
+#if ACCESSIBLE
+    _xMinTextField.accessibilityLabel = X_MIN_AX_LABEL;
+    _xMaxTextField.accessibilityLabel = X_MAX_AX_LABEL;
+    _rectangleCountLabel.isAccessibilityElement = NO;
+    _rectangleCountValueLabel.isAccessibilityElement = NO;
+#endif
+
 }
 
 - (void)rectangleCountDidUpdate:(UIControl *)sender
@@ -224,7 +227,9 @@
     if (sender == _rectangleCountStepper) {
         [self resignFirstResponder];
         _rectangleCountValueLabel.text = [NSString stringWithFormat:@"%d", (int)_rectangleCountStepper.value];
+#if ACCESSIBLE
         _rectangleCountStepper.accessibilityValue = RECTANGLE_STEPPER_AX_VALUE((int)_rectangleCountStepper.value);
+#endif
         [_delegate rectangleCountStepperValueDidChange:_rectangleCountStepper];
     }
 }
@@ -324,24 +329,6 @@
     // Center align labels
     _rectangleCountLabel.center = CGPointMake(_rectangleCountLabel.center.x, _rectangleCountStepper.center.y);
     _rectangleCountValueLabel.center = CGPointMake(_rectangleCountValueLabel.center.x, _rectangleCountStepper.center.y);
-    
-    // Accessibility: Here we work around a known issue (radar# 14828925) where the segmented control
-    // does not respect the accessibilityLabel properties on the NSStrings provided.
-    NSArray *segments = [_functionSegmentedControl subviews];
-    for (UIView *view in segments) {
-        NSString *oldLabel = view.accessibilityLabel;
-        NSUInteger index = [_functionStrings indexOfObject:oldLabel];
-        if (index != NSNotFound) {
-            view.accessibilityLabel = [_functionStrings[index] accessibilityLabel];
-        }
-    }
-    
-    CGRect axStepperFrame = CGRectMake(
-                                       _rectangleCountLabel.frame.origin.x,
-                                       _rectangleCountStepper.frame.origin.y,
-                                       _rectangleCountLabel.frame.size.width + _rectangleCountStepper.frame.size.width + _rectangleCountValueLabel.frame.size.width,
-                                       _rectangleCountStepper.frame.size.height);
-    _rectangleCountStepper.accessibilityFrame = [_rectangleCountStepper.superview rs_screenCoordinatesForRect:axStepperFrame];
     
 }
 

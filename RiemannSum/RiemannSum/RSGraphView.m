@@ -118,7 +118,8 @@
         const CGPoint xMaxPoint= [self convertFunctionValueToGraphPoint:xMaxVal fOfXMin:fOfXMin fOfXMax:fOfXMax rect:graphFrame];
         const CGPoint yMinPoint= [self convertFunctionValueToGraphPoint:fOfXMinVal fOfXMin:fOfXMin fOfXMax:fOfXMax rect:graphFrame];
         const CGPoint yMaxPoint= [self convertFunctionValueToGraphPoint:fOfXMaxVal fOfXMin:fOfXMin fOfXMax:fOfXMax rect:graphFrame];
-        
+
+#if ACCESSIBLE
         // We see here that order matters in our _axElemment array
         if (yMaxPoint.y < xMinPoint.y) {
             [_axElements addObject:[self axElementForAxisMin:yMinPoint minValue:fOfXMinVal.fOfX max:yMaxPoint maxValue:fOfXMaxVal.fOfX isY:YES]];
@@ -127,6 +128,7 @@
             [_axElements addObject:[self axElementForAxisMin:xMinPoint minValue:xMinVal.x max:xMaxPoint maxValue:xMaxVal.x isY:NO]];
             [_axElements addObject:[self axElementForAxisMin:yMinPoint minValue:fOfXMinVal.fOfX max:yMaxPoint maxValue:fOfXMaxVal.fOfX isY:YES]];
         }
+#endif
         
         CGContextSaveGState(ctx);
         {
@@ -227,7 +229,9 @@
             point = [self convertFunctionValueToGraphPoint:curveValues[i] fOfXMin:fOfXMin fOfXMax:fOfXMax rect:graphFrame];
             [curve addLineToPoint:point];
         }
+#if ACCESSIBLE
         [_axElements addObject:[self axElementForFunctionCurve:curve]];
+#endif
         CGContextSaveGState(ctx);
         {
             CGContextSetLineWidth(ctx, 2.0f);
@@ -262,8 +266,9 @@
                                         
                     CGContextFillRect(ctx, newRect);
                     CGContextStrokeRect(ctx, newRect);
-                    
+#if ACCESSIBLE
                     [_axElements addObject:[self axElementForRectangle:newRect forValue:value withDx:dx rectNumber:i + 1]];
+#endif
                 }
                 CGContextRestoreGState(ctx);
             }
@@ -272,7 +277,9 @@
     }
     
     // We do this to avoid waiting until we try to access the elements to rebuilt the AX-tree
+#if ACCESSIBLE
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+#endif
 }
 
 - (CGPoint)convertFunctionValueToGraphPoint:(const RSRiemannModelFunctionValue *)value fOfXMin:(RSFloat)fOfXMin fOfXMax:(RSFloat)fOfXMax rect:(CGRect)rect
@@ -293,6 +300,8 @@
 #define AXIS_VALUE(MIN, MAX) ([NSString stringWithFormat:@"From %.02f to %.02f", (MIN), (MAX)])
 #define RECT_LABEL(N) ([NSString stringWithFormat:@"Rectangle %d", (N)])
 #define RECT_VALUE(X, DX, Y) ([NSString stringWithFormat:@"Height %.02f. From x = %.02f to %.02f. Area %.02f.", (Y), (X), ((X) + (DX)), ((DX) * (Y))])
+
+#if ACCESSIBLE
 
 - (BOOL)isAccessibilityElement
 {
@@ -376,5 +385,6 @@
     elem.accessibilityPath = axPath;
     return elem;
 }
+#endif
 
 @end
