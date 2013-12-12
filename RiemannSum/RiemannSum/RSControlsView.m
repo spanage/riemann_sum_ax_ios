@@ -50,13 +50,13 @@
 
 - (void)accessibilityIncrement
 {
-    self.value += 1.0;
+    self.value += self.stepValue;
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)accessibilityDecrement
 {
-    self.value -= 1.0;
+    self.value -= self.stepValue;
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 

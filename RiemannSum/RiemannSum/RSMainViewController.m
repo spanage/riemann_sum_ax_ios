@@ -127,7 +127,7 @@
     _titleView.backgroundColor = [UIColor clearColor];
     _titleView.textColor = [UIColor darkTextColor];
 #if ACCESSIBLE
-    _titleView.accessibilityTraits = UIAccessibilityTraitHeader;
+    _titleView.accessibilityTraits |= UIAccessibilityTraitHeader;
 #endif
     
     _controlsView = [[RSControlsView alloc] init];
