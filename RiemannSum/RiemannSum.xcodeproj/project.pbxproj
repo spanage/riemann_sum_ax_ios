@@ -219,7 +219,7 @@
 			name = RiemannSumTests;
 			productName = RiemannSumTests;
 			productReference = 87E19AF917AF474600F459FC /* RiemannSumTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -377,11 +377,14 @@
 		78725CA4185688C100B2A034 /* Debug (NO AX) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "com.apple.ubiquity.peer-uuid.C83E52F0-1012-4319-BA3F-BED58CE6BDAB";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sommer Panage (96XM2X6V9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
 				INFOPLIST_FILE = "RiemannSum/RiemannSum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -467,11 +470,14 @@
 		87E19B0C17AF474600F459FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "com.apple.ubiquity.peer-uuid.C83E52F0-1012-4319-BA3F-BED58CE6BDAB";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sommer Panage (96XM2X6V9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
 				INFOPLIST_FILE = "RiemannSum/RiemannSum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -480,11 +486,14 @@
 		87E19B0D17AF474600F459FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "com.apple.ubiquity.peer-uuid.C83E52F0-1012-4319-BA3F-BED58CE6BDAB";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sommer Panage (96XM2X6V9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RiemannSum/RiemannSum-Prefix.pch";
 				INFOPLIST_FILE = "RiemannSum/RiemannSum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

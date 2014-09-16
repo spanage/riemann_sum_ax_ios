@@ -155,33 +155,33 @@
             CGContextSaveGState(ctx);
             {
                 NSString* xMinString = [NSString stringWithFormat:GRAPH_TICK_FORMAT_STRING, _model.xMin];
-                CGSize xMinSize = [xMinString sizeWithFont:GRAPH_TICK_FONT];
+                CGSize xMinSize = [xMinString sizeWithAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
                 CGPoint xMinCenter = CGPointMake(xMinPoint.x - GRAPH_TICK_LENGTH, xMinPoint.y);
                 CGContextTranslateCTM(ctx, xMinCenter.x, xMinCenter.y);
                 CGContextRotateCTM(ctx, -M_PI_2);
                 CGContextTranslateCTM(ctx, -xMinCenter.x, -xMinCenter.y);
-                [xMinString drawAtPoint:CGPointMake(xMinCenter.x - (xMinSize.width / 2.0f), xMinCenter.y - (xMinSize.height / 2.0f)) withFont:GRAPH_TICK_FONT];
+                [xMinString drawAtPoint:CGPointMake(xMinCenter.x - (xMinSize.width / 2.0f), xMinCenter.y - (xMinSize.height / 2.0f)) withAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
             }
             CGContextRestoreGState(ctx);
             CGContextSaveGState(ctx);
             {
                 NSString* xMaxString = [NSString stringWithFormat:GRAPH_TICK_FORMAT_STRING, _model.xMax];
-                CGSize xMaxSize = [xMaxString sizeWithFont:GRAPH_TICK_FONT];
+                CGSize xMaxSize = [xMaxString sizeWithAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
                 CGPoint xMaxCenter = CGPointMake(xMaxPoint.x + GRAPH_TICK_LENGTH, xMinPoint.y);
                 CGContextTranslateCTM(ctx, xMaxCenter.x, xMaxCenter.y);
                 CGContextRotateCTM(ctx, M_PI_2);
                 CGContextTranslateCTM(ctx, -xMaxCenter.x, -xMaxCenter.y);
-                [xMaxString drawAtPoint:CGPointMake(xMaxCenter.x - (xMaxSize.width / 2.0f), xMaxCenter.y - (xMaxSize.height / 2.0f)) withFont:GRAPH_TICK_FONT];
+                [xMaxString drawAtPoint:CGPointMake(xMaxCenter.x - (xMaxSize.width / 2.0f), xMaxCenter.y - (xMaxSize.height / 2.0f)) withAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
             }
             CGContextRestoreGState(ctx);
             CGContextSaveGState(ctx);
             {
                 NSString* fOfXMinString = [NSString stringWithFormat:GRAPH_TICK_FORMAT_STRING, fOfXMin];
                 NSString* fOfXMaxString = [NSString stringWithFormat:GRAPH_TICK_FORMAT_STRING, fOfXMax];
-                CGSize fOfXMinSize = [fOfXMinString sizeWithFont:GRAPH_TICK_FONT];
-                CGSize fOfXMaxSize = [fOfXMaxString sizeWithFont:GRAPH_TICK_FONT];
-                [fOfXMinString drawAtPoint:CGPointMake(yMinPoint.x - floorf(fOfXMinSize.width / 2.0f), yMinPoint.y + floorf(GRAPH_TICK_LENGTH / 2.0f)) withFont:GRAPH_TICK_FONT];
-                [fOfXMaxString drawAtPoint:CGPointMake(yMaxPoint.x - floorf(fOfXMaxSize.width / 2.0f), yMaxPoint.y - floorf(GRAPH_TICK_LENGTH / 2.0f) - fOfXMaxSize.height) withFont:GRAPH_TICK_FONT];
+                CGSize fOfXMinSize = [fOfXMinString sizeWithAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
+                CGSize fOfXMaxSize = [fOfXMaxString sizeWithAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
+                [fOfXMinString drawAtPoint:CGPointMake(yMinPoint.x - floorf(fOfXMinSize.width / 2.0f), yMinPoint.y + floorf(GRAPH_TICK_LENGTH / 2.0f)) withAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
+                [fOfXMaxString drawAtPoint:CGPointMake(yMaxPoint.x - floorf(fOfXMaxSize.width / 2.0f), yMaxPoint.y - floorf(GRAPH_TICK_LENGTH / 2.0f) - fOfXMaxSize.height) withAttributes:@{NSFontAttributeName : GRAPH_TICK_FONT}];
             }
             CGContextRestoreGState(ctx);
             

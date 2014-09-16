@@ -15,7 +15,7 @@
 #define RECTANGLE_COUNT_STEP_VALUE 1
 
 #define SEGMENTED_CONTROL_TEXT_PADDING 4.0f
-#define VERTICAL_SPACER 6.0f
+#define VERTICAL_SPACER 20.0f
 #define HORIZANTAL_SPACER_SMALL 4.0f
 #define HORIZANTAL_SPACER_LARGE ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? (40.0f) : (12.0f))
 
@@ -156,10 +156,9 @@
     _axFunctionStrings = [[NSMutableArray alloc] initWithCapacity:MAX_FUNCTIONS];
 
     _functionSegmentedControl = [[UISegmentedControl alloc] init];
-    _functionSegmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
     _functionSegmentedControl.tintColor = [UIColor blackColor];
     _functionSegmentedControl.apportionsSegmentWidthsByContent = YES;
-    [_functionSegmentedControl setTitleTextAttributes:@{UITextAttributeFont: FUNCTION_SEGEMENTS_FONT} forState:UIControlStateNormal];
+    [_functionSegmentedControl setTitleTextAttributes:@{NSFontAttributeName: FUNCTION_SEGEMENTS_FONT} forState:UIControlStateNormal];
     [_functionSegmentedControl addTarget:self action:@selector(functionSegmentDidUpdate:) forControlEvents:(UIControlEventValueChanged)];
 
     _xMinTextField = [[UITextField alloc] init];
@@ -284,9 +283,10 @@
     [_rectangleCountStepper sizeToFit];
     const CGSize stepperSize = _rectangleCountStepper.frame.size;
     
-    const int sizingGuildInt = (int)_rectangleCountStepper.maximumValue * 10; // big enough for an extra digit
-    const CGSize stepperValueSize = [[NSString stringWithFormat:@"%d", sizingGuildInt] sizeWithFont:_rectangleCountValueLabel.font constrainedToSize:_secondRowContainerView.bounds.size];
-    
+    const int sizingGuideInt = (int)_rectangleCountStepper.maximumValue * 10; // big enough for an extra digit
+    CGSize minStepperValueSize = [[NSString stringWithFormat:@"%d", sizingGuideInt] boundingRectWithSize:_secondRowContainerView.bounds.size options:0 attributes:@{NSFontAttributeName : _rectangleCountValueLabel.font} context:nil].size;
+    const CGSize stepperValueSize = CGSizeMake(ceilf(minStepperValueSize.width), ceilf(minStepperValueSize.height));
+
     const CGFloat actualWidth = xMinSize.width + HORIZANTAL_SPACER_SMALL + xMaxSize.width + HORIZANTAL_SPACER_LARGE + stepperLabelSize.width + HORIZANTAL_SPACER_SMALL + stepperSize.width + HORIZANTAL_SPACER_SMALL + stepperValueSize.width;
     
     _secondRowContainerView.frame = CGRectMake(floorf((CGRectGetMaxX(self.bounds) - actualWidth) / 2.0f), CGRectGetMaxY(_functionSegmentedControl.frame) + VERTICAL_SPACER, actualWidth, self.bounds.size.height - _functionSegmentedControl.frame.size.height - VERTICAL_SPACER);
